@@ -18,7 +18,7 @@ class Main extends PluginBase implements Listener{
 		
 	public function onDeath(PlayerDeathEvent $event) {
 		$player = $event->getPlayer();
-		$player->sendMessage(C::RED . "You died!");
+		$player->sendMessage(C::LIGHT_PURPLE . "You have died!");
     $this->openMyForm($player);
 		}
     public function openMyForm($player){ 
@@ -30,15 +30,15 @@ class Main extends PluginBase implements Listener{
             }             
             switch($result){
                 case 0:
-                    $player->sendMessage(TextFormat::RED . "Exiting");                    
+                    $player->sendMessage(TextFormat::RED . "Exiting...");                    
                 break;                     
             }
             
             
             });
-            $form->setTitle("§l§cYOU DIED");
-            $form->setContent(" §l§e§oINFO§r§f: You §bdied!");
-            $form->addButton("Exit");
+            $form->setTitle("§l§cDEAD");
+            $form->setContent(" §l§6STATS§r§b You have been killed!");
+            $form->addButton("§l§cEXIT");
             $form->sendToPlayer($player);                  
             return $form;                                            
 				}
