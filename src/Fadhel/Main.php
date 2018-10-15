@@ -13,7 +13,7 @@ class Main extends PluginBase implements Listener{
 	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getLogger()->Info(C::GREEN. "Enabled!");
+		$this->getLogger()->Info(C::GREEN. "Enabled This Bitch!");
 		}
 		
 	public function onDeath(PlayerDeathEvent $event) {
